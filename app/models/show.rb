@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
       binding.pry
       character.actor.full_name
       # "#{character.name} - #{character.show.name}"
-    end.join
+    end
   end
 
 end
