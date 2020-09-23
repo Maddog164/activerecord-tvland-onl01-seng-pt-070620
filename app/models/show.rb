@@ -4,8 +4,9 @@ class Show < ActiveRecord::Base
   has_many :characters
 
   def actors_list
-    self.actors.collect do |character|
-      actor.full_name
+    self.characters.collect do |character|
+      binding.pry
+      characters.actor.full_name
       # "#{character.name} - #{character.show.name}"
     end.join
   end
