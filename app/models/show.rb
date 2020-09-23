@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   def actors_list
     self.characters.collect do |character|
       binding.pry
-      characters.actor.full_name
+      character.actor.full_name
       # "#{character.name} - #{character.show.name}"
     end.join
   end
